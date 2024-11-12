@@ -1,0 +1,138 @@
+@import "../../../../assets/styles/variables";
+
+.header-content {
+display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+  border-bottom: 1px solid #EBEBEB;
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 800;
+  background: transparent;
+
+  .header-location {
+    border-right: 1px solid #EBEBEB;
+    width: 86px;
+    height: 86px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 34px 0;
+  }
+
+  .header-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1004px;
+    height: 30px;
+
+    .header-left-menu nav ul, .header-right-menu nav ul {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 15px;
+
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          color: #222222B2;
+          font-size: 14px;
+          line-height: 20px;
+          margin-right: 50px;
+
+          &:hover {
+            color: $dark-text-color;
+            border-bottom: 2px solid $dark-text-color;
+            padding-bottom: 33px;
+          }
+
+          & active {
+            color: $dark-text-color;
+          }
+        }
+
+        &:last-child a {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .header-adaptive-left-menu, .header-adaptive-right-menu {
+      display: none;
+
+      .burger {
+        display: block;
+
+        svg {
+          width: 50px;
+          height: 50px;
+
+          line {
+            stroke: $dark-text-color;
+          }
+        }
+      }
+
+    }
+  }
+
+  .header-phone {
+    border-left: 1px solid #EBEBEB;
+    width: 86px;
+    height: 86px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 33px 0;
+  }
+}
+
+@media screen and (max-width: 846px) {
+  .header-content {
+    .header-menu {
+
+      .header-left-menu nav ul, .header-right-menu nav ul {
+
+        li {
+          a {
+            margin-right: 20px;
+
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .header-content {
+
+    .header-location {
+     padding-left: 20px;
+     padding-right: 20px;
+    }
+
+    .header-menu {
+      width: 150px;
+      .header-left-menu, .header-right-menu {
+        display: none;
+      }
+
+      .header-adaptive-left-menu, .header-adaptive-right-menu {
+        display: block;
+      }
+
+      .header-left-menu nav ul, .header-right-menu nav ul {
+        li {
+          a {
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+
+    .header-phone {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}

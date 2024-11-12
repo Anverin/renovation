@@ -1,0 +1,738 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
+
+.main {
+  margin-top: 64px;
+
+  .main-title {
+    width: 981px;
+    margin: 0 auto 58px auto;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 72px;
+    color: $dark-text-color;
+    text-align: center;
+
+
+    span {
+      color: transparent;
+      -webkit-text-stroke: 1px $dark-text-color;
+    }
+  }
+
+  .main-button {
+    margin-bottom: 84px;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .main-menu {
+    background-image: url('../../../assets/images/main-image.png');
+    height: 344px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 136px;
+    position: relative;
+
+    nav ul {
+      display: grid;
+      grid-template-columns: repeat(4, calc(25%));
+      grid-template-rows: 1fr;
+      padding: 0;
+
+      li {
+        list-style: none;
+        padding: 30px 0;
+        margin-top: 173px;
+        border: 1px solid #FFFFFF4D;
+        text-align: center;
+
+        a {
+          text-decoration: none;
+          font-family: 'Gilroy', sans-serif;
+          font-size: 20px;
+          font-weight: 800;
+          color: $white-text-color;
+        }
+      }
+    }
+
+    .main-menu-arrow {
+      display: block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid #FFFFFF4D;
+      background: transparent;
+      position: absolute;
+      bottom: 22px;
+      left: calc(50% - 20px);
+      text-align: center;
+      padding-top: 12px;
+      box-sizing: border-box;
+    }
+  }
+
+  .portfolio {
+    .portfolio-container {
+      width: 1100px;
+      margin: 0 auto 136px auto;
+
+      .portfolio-title {
+        @include section-title;
+        width: 459px;
+        position: relative;
+        margin-bottom: 48px;
+
+        &::before {
+          @include section-before-line;
+        }
+
+      }
+
+      .portfolio-items {
+        margin-bottom: 64px;
+        display: grid;
+        grid-column-gap: 8px;
+        grid-row-gap: 5px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+              "portfolio1 portfolio1 portfolio2"
+              "portfolio3 portfolio4 portfolio2"
+              "portfolio5 portfolio6 portfolio7"
+              "portfolio5 portfolio8 portfolio8";
+
+        .portfolio1 {
+          grid-area: portfolio1;
+        }
+
+        .portfolio2 {
+          grid-area: portfolio2;
+        }
+
+        .portfolio3 {
+          grid-area: portfolio3;
+        }
+
+        .portfolio4 {
+          grid-area: portfolio4;
+        }
+
+        .portfolio5 {
+          grid-area: portfolio5;
+        }
+
+        .portfolio6 {
+          grid-area: portfolio6;
+        }
+
+        .portfolio7 {
+          grid-area: portfolio7;
+        }
+
+        .portfolio8 {
+          grid-area: portfolio8;
+        }
+      }
+
+      .menu-button {
+        text-align: center;
+      }
+    }
+  }
+
+  .contacts {
+    .container {
+      width: 1100px;
+      margin: 0 auto 135px auto;
+    }
+
+    .contacts-title {
+      @include section-title;
+      margin-bottom: 48px;
+      position: relative;
+
+      &::before {
+        @include section-before-line;
+      }
+
+    }
+
+    .contacts-content {
+      display: flex;
+
+      .contacts-list {
+        width: 740px;
+        display: grid;
+        grid-row-gap: 48px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 52px) 1fr;
+        grid-template-areas:
+              "office working-hours"
+              "email phone"
+              "socials .";
+
+        .office {
+          grid-area: office;
+        }
+
+        .working-hours {
+          grid-area: working-hours;
+        }
+
+        .email {
+          grid-area: email;
+        }
+
+        .phone {
+          grid-area: phone;
+        }
+
+        .socials {
+          grid-area: socials;
+
+          svg {
+            margin-right: 10px;
+          }
+        }
+
+        .contacts-list-item-title {
+          font-family: 'Gilroy', sans-serif;
+          font-weight: 800;
+          font-size: 14px;
+          line-height: 20px;
+          color: $dark-text-color;
+          margin-bottom: 8px;
+        }
+
+        .contacts-list-item-description {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 24px;
+          color: $dark-text-color;
+
+          sup {
+            font-size: 8px;
+          }
+
+          a {
+            text-decoration: none;
+            color: $dark-text-color;
+          }
+        }
+      }
+
+      .contacts-form {
+        width: 360px;
+
+        .contacts-form-title {
+          font-family: 'Gilroy', sans-serif;
+          font-weight: 800;
+          font-size: 14px;
+          line-height: 20px;
+          color: $dark-text-color;
+          margin-bottom: 25px;
+        }
+
+        .contacts-form-input {
+          margin-bottom: 30px;
+
+          .contacts-form-input-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 9px;
+            line-height: 12px;
+            color: $dark-text-color;
+            margin-bottom: 3px;
+          }
+
+          input {
+            outline: none;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 1px solid #EBEBEB;
+            padding-bottom: 5px;
+            width: 360px;
+            color: $dark-text-color;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 24px;
+
+            &::placeholder {
+              font-family: 'Montserrat', sans-serif;
+              font-weight: 400;
+              font-size: 13px;
+              line-height: 24px;
+              color: #909090;
+            }
+          }
+        }
+
+        .notice {
+          color: red;
+          margin-top: 1px;
+          font-family: "Montserrat", sans-serif;
+          font-weight: 500;
+          font-size: 9px;
+          width: 170px;
+        }
+
+        .contacts-form-input-message {
+          position: relative;
+
+          svg {
+            position: absolute;
+            right: 0;
+            bottom: 6px;
+            cursor: pointer;
+          }
+        }
+
+        .contacts-form-notice {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 500;
+          font-size: 9px;
+          line-height: 12px;
+          color: #909090;
+          margin-bottom: 33px;
+
+          a {
+            text-decoration: none;
+            color: $dark-text-color;
+            padding-bottom: 3px;
+            border-bottom: 1px dotted $dark-text-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  .main {
+    .portfolio {
+      .portfolio-container {
+        margin: 0 auto 100px auto;
+
+        .portfolio-title {
+          margin-left: 50px;
+        }
+
+        .portfolio-items {
+          margin: 0 auto 40px auto;
+          grid-row-gap: 3px;
+          width: 730px;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(6, 1fr);
+          grid-template-areas:
+              "portfolio1 portfolio1"
+              "portfolio3 portfolio4"
+              "portfolio2 portfolio5"
+              "portfolio2 portfolio5"
+              "portfolio6 portfolio7"
+              "portfolio8 portfolio8";
+        }
+      }
+    }
+  }
+
+  .contacts {
+    .container {
+      width: 100%;
+      margin: 0 auto 100px auto;
+    }
+
+    .contacts-title {
+      @include section-title;
+      margin-bottom: 40px;
+      margin-left: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .main {
+    .portfolio {
+      .portfolio-container {
+        width: 100%;
+        margin: 0 auto 100px auto;
+
+        .portfolio-title {
+          margin-left: 150px;
+        }
+
+        .portfolio-items {
+          margin: 0 auto 40px auto;
+          grid-row-gap: 3px;
+          width: 730px;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(6, 1fr);
+          grid-template-areas:
+              "portfolio1 portfolio1"
+              "portfolio3 portfolio4"
+              "portfolio2 portfolio5"
+              "portfolio2 portfolio5"
+              "portfolio6 portfolio7"
+              "portfolio8 portfolio8";
+        }
+      }
+    }
+
+    .contacts {
+      .container {
+        width: 100%;
+        margin: 0 auto 100px auto;
+        padding: 0 50px;
+        box-sizing: border-box;
+      }
+
+      .contacts-title {
+        margin-left: 150px;
+      }
+
+      .contacts-content {
+        display: flex;
+        justify-content: space-between;
+
+        .contacts-list {
+          width: 500px;
+          display: grid;
+          grid-row-gap: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main {
+    margin-top: 50px;
+
+    .main-title {
+      width: 100%;
+      margin: 0 auto 40px auto;
+      font-size: 54px;
+      line-height: 60px;
+    }
+
+    .main-button {
+      margin-bottom: 60px;
+    }
+
+    .main-menu {
+      margin-bottom: 80px;
+    }
+
+    .contacts {
+
+      .contacts-title {
+        margin-bottom: 30px;
+      }
+
+      .contacts-content {
+        display: flex;
+        justify-content: space-between;
+
+        .contacts-list {
+          width: 300px;
+          display: grid;
+          grid-row-gap: 15px;
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: repeat(5, 1fr);
+          grid-template-areas:
+              "office"
+              "working-hours"
+              "email"
+              "phone"
+              "socials";
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    margin-top: 40px;
+
+    .main-title {
+      font-size: 44px;
+      line-height: 50px;
+    }
+
+    .main-button {
+      margin-bottom: 50px;
+    }
+
+    .main-menu {
+      nav ul {
+        li {
+          a {
+            font-size: 16px;
+          }
+        }
+      }
+
+    }
+
+    .portfolio {
+      .portfolio-container {
+        margin: 0 auto 80px auto;
+
+        .portfolio-title {
+          margin-left: 100px;
+        }
+
+        .portfolio-items {
+          margin: 0 auto 40px auto;
+          grid-row-gap: 3px;
+          width: 600px;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(6, 1fr);
+          grid-template-areas:
+              "portfolio1 portfolio1"
+              "portfolio3 portfolio4"
+              "portfolio2 portfolio5"
+              "portfolio2 portfolio5"
+              "portfolio6 portfolio7"
+              "portfolio8 portfolio8";
+
+          .portfolio-item {
+            img {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .contacts {
+      .contacts-content {
+        .contacts-form {
+          width: 280px;
+
+          .contacts-form-input {
+
+            input {
+              width: 280px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .main {
+
+    .main-menu {
+      margin-bottom: 60px;
+
+      nav ul {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        grid-template-columns: repeat(2, calc(50%));
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 0;
+
+        li {
+          margin-top: 0;
+          padding: 30px 10px;
+
+          a {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .portfolio {
+      .portfolio-container {
+        margin: 0 auto 80px auto;
+
+        .portfolio-title {
+          @include section-title-small;
+          width: 100%;
+          margin-left: 80px;
+
+          &::before {
+            left: -50px;
+          }
+
+        }
+
+        .portfolio-items {
+          margin: 0 auto 40px auto;
+          grid-row-gap: 3px;
+          width: 450px;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(6, 1fr);
+          grid-template-areas:
+              "portfolio1 portfolio1"
+              "portfolio3 portfolio4"
+              "portfolio2 portfolio5"
+              "portfolio2 portfolio5"
+              "portfolio6 portfolio7"
+              "portfolio8 portfolio8";
+
+          .portfolio-item {
+            img {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .contacts {
+      .contacts-title {
+        @include section-title-small;
+      }
+
+      .contacts-content {
+
+        .contacts-form {
+          width: 200px;
+
+          .contacts-form-input {
+            input {
+              width: 200px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .main {
+    .contacts {
+      .container {
+        margin: 0 auto 50px auto;
+      }
+
+      .contacts-content {
+        flex-direction: column;
+
+        .contacts-list {
+          margin-bottom: 30px;
+          grid-row-gap: 0;
+        }
+
+        .contacts-form {
+          width: 350px;
+
+          .contacts-form-input {
+            input {
+              width: 350px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .main {
+
+    .main-menu {
+      margin-bottom: 40px;
+    }
+
+    .portfolio {
+      .portfolio-container {
+        margin: 0 auto 60px auto;
+
+        .portfolio-title {
+          width: 240px;
+          margin-bottom: 30px;
+          margin-left: 60px;
+
+          &::before {
+            left: -30px;
+            width: 20px;
+          }
+
+        }
+
+        .portfolio-items {
+          margin: 0 auto 40px auto;
+          width: 350px;
+        }
+      }
+    }
+
+    .contacts {
+      .container {
+        margin: 0 auto 40px auto;
+        padding: 0 20px;
+      }
+
+      .contacts-title {
+        margin-left: 60px;
+
+        &::before {
+          left: -30px;
+          width: 20px;
+        }
+
+      }
+
+      .contacts-content {
+        flex-direction: column;
+
+        .contacts-list {
+          margin-bottom: 30px;
+          grid-row-gap: 0;
+        }
+
+        .contacts-form {
+          width: 280px;
+
+          .contacts-form-input {
+            input {
+              width: 280px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .main {
+    .main-menu {
+      nav ul {
+        li {
+          a {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .portfolio {
+      .portfolio-container {
+        margin: 0 auto 40px auto;
+        .portfolio-items {
+          margin: 0 auto 40px auto;
+          width: 300px;
+        }
+      }
+    }
+  }
+}
